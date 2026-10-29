@@ -1,8 +1,0 @@
-/* === LARGER.CSS — Desktop Overrides (≥768px) === */
-@media (min-width: 768px) {
-  .hamburger { display: none; }
-  .navigation { display: block; }
-  .navigation ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
-  .navigation a { padding: 0.5rem 1rem; text-decoration: none; color: var(--text-color, #333); }
-  .navigation a:hover { color: var(--primary-color, #006); }
-}
