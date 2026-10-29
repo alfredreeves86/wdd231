@@ -1,0 +1,9 @@
+/* === BASE.CSS — Mobile-First Styles === */
+.navigation { display: none; }
+.navigation.show { display: block; }
+.hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger-line { display: block; width: 24px; height: 2px; background: var(--primary-color, #006); transition: transform 0.3s, opacity 0.3s; }
+.hamburger.show .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.show .hamburger-line:nth-child(2) { opacity: 0; }
+.hamburger.show .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.navigation li.current a { background-color: var(--primary-color, #006); color: white; border-radius: 4px; font-weight: bold; }
