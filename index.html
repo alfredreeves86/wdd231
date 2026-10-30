@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Web Frontend Development I</title>
+    <meta name="description" content="Course Home Page for WDD 231 Web Frontend Developer | BYUI">
+    <meta name="author" content="Alfred Kamisese"
+    <link rel="icon" href="images/logo.svg">
+
+    <!--Googel Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gastatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+     <!--CSS Links-->
+     <link rel="stylesheet" href="styles/normalize.css">
+     <link rel="stylesheet" href="styles/small.css">
+     <link rel="stylesheet" href="styles/larger.css">
+
+     <!--JS defer link-->
+     <script src="scripts/navigation.js" defer></script>
+     <script src="scripts/date.js" defer></script>
+     <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="WDD 231 Logo" width="48" height="48">
+            <span>WDD 231 - Web Frontend Development I</span>
+        </div>
+        <!--Hamburger Button-->
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!--Navigation-->
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="project/kindex.html">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section id="certificate-courses">
+            <h2>Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="WDD">WDD</button>
+                <button data-filter="CSE">CSE</button>
+            </div>
+            <div id="courses-container" class="courses-grid"></div>
+            <p id="credits-total" class="credits-total"></p>
+        </section>
+
+        <section id="resources">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://byui-cse.github.io/wdd231-ww-course/" target="blank" rel="noopener">Course Website</a></li>
+                <li><a href="https://byui-cs.github.io/wdd-audits/wdd231-w01-homepage.html" target="_blank" rel="noopener">Week 1 Audit Tool</a></li>
+                <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section social-section">
+            <h3>Connect</h3>
+            <div class="social-icons">
+            <a href="https://github.com/alfredreeves86" target="_blank" rel="noopener" aria-label="Github">
+                <img src="images/github.svg" alt="Github Profile" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/alfred-reeves-kamisese-27a32a205" target="_blank" rel="noopener" aria-label="Linkedin">
+                <img src="images/linkedin.svg" alt="Linkedin profile" width="32" height="32">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                <img src="images/twitter.svg" alt="Twitter profile" width="32" height="32">
+            </a>
+            </div>
+        </div>
+        <div class="footer-section info-section">
+            <p>&copy; <span id="currentyuear"></span>| Alfred Kamisese | California, USA</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+        <div class="footer-section attribution-section">
+            <p>WDD 231 Course Home Page | BYU-Idaho</p>
+        </div>
+    </footer>
+</body>
+</html>
