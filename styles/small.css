@@ -140,6 +140,7 @@ header {
 /*current page highligh(use wayfinding)*/
 .navigation li.current a {
     background-color: var(--accent-color);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
@@ -228,6 +229,7 @@ section p {
 
 .filter-buttons button.active {
     background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /*Course cards grid setup*/
@@ -262,7 +264,7 @@ section p {
     content: "✓ Completed";
     display: inline-block;
     background-color: var(--accent-color);
-    color: white;
+    color: var(--primary-color);
     font-size: 0.75rem;
     font-weight: 600;
     padding: 2px 8px;
