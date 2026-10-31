@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 - Web Frontend Development I</title>
     <meta name="description" content="Course Home Page for WDD 231 Web Frontend Developer | BYUI">
-    <meta name="author" content="Alfred Kamisese"
+    <meta name="author" content="Alfred Kamisese">
     <link rel="icon" href="images/logo.svg">
 
-    <!--Googel Fonts-->
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gastatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 
      <!--CSS Links-->
@@ -41,7 +41,7 @@
             <ul>
                 <li class="current"><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="chamber/index.html">Chamber</a></li>
-                <li><a href="project/kindex.html">Final</a></li>
+                <li><a href="project/index.html">Final</a></li>
             </ul>
         </nav>
     </header>
@@ -49,6 +49,18 @@
     <main>
         <h1>Home</h1>
 
+        <section id="about-course">
+            <h2>About This Course</h2>
+            <p>WDD 231 builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.</p>
+            <div class="about-me">
+                <img src="images/alfredportrait.webp" alt="Alfred Kamisese - Web Developer" width="400" height="250" loading="lazy">
+                <div class="bio">
+                <h3>About Me</h3>
+                <p>I'm Alfred Kamisese, a web developer based in California. I'm passionate about creating accessible, performant web experiences that serve real users. My background spans web development, photography/videography, and financial analysis - giving me a unique perspective on building digital products.</p>
+                <p>When not coding, you'll find me behind a camera capturing moments, analyzing trading markets, or exploring the intersection of design and technology.</p>
+                </div>
+            </div>
+        </section>
         <section id="certificate-courses">
             <h2>Certificate Courses</h2>
             <div class="filter-buttons">
@@ -63,8 +75,8 @@
         <section id="resources">
             <h2>Resources</h2>
             <ul>
-                <li><a href="https://byui-cse.github.io/wdd231-ww-course/" target="blank" rel="noopener">Course Website</a></li>
-                <li><a href="https://byui-cs.github.io/wdd-audits/wdd231-w01-homepage.html" target="_blank" rel="noopener">Week 1 Audit Tool</a></li>
+                <li><a href="https://byui-cse.github.io/wdd231-ww-course/" target="_blank" rel="noopener">Course Website</a></li>
+                <li><a href="https://byui-cse.github.io/wdd-audits/wdd231-w01-homepage.html" target="_blank" rel="noopener">Week 1 Audit Tool</a></li>
                 <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
             </ul>
         </section>
@@ -86,7 +98,7 @@
             </div>
         </div>
         <div class="footer-section info-section">
-            <p>&copy; <span id="currentyuear"></span>| Alfred Kamisese | California, USA</p>
+            <p>&copy; <span id="currentyear"></span> | Alfred Kamisese | California, USA</p>
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
         <div class="footer-section attribution-section">

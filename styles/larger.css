@@ -1,0 +1,90 @@
+/* Desktop overrides(≥768px) */
+@media (min-width: 768px) {
+
+    /*structuring: Header: Logo | Spacer | Nav */
+header {
+    grid-template-columns: auto 1fr auto;
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+.logo span {
+    font-size: 1.5rem;
+}
+
+/*Hide Hamburger on Desktop*/
+.hamburger {display: none;}
+
+/*Notes:Nav always visible, horizontal flex*/
+.navigation {
+    display: flex !important;/*will override mobile display:none*/
+    grid-column: 3;
+    border-top: none;
+    padding: 0;
+}
+
+.navigation ul {
+    flex-direction: row; /*note:horizontal*/
+    gap: var(--spacing-md);
+}
+
+.navigation a:hover {
+    color: var(--accent-color);
+    background-color: transparent;
+}
+
+/*For wayfinding on Desktop - Text Color Only*/
+.navigation li.current a {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+/*MAIN max-width centered*/
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+main h1 {
+    font-size: 2.5rem;
+}
+section h2 {
+    font-size: 1.75rem;
+}
+
+/*ABOUT SECTION: Side-by-side layout*/
+#about-course {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+#about-course img {
+    max-width: 100%;
+}
+
+/*About Me Layout: check:image left, bio right*/
+.about-me {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+}
+
+.about-me img {max-width: 300px;}
+
+/*COURSE CARDS: LAYOUT-3 column Grid*/
+.course-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*FOOTER:3 columns*/
+footer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-xl);
+    text-align: left;
+}
+
+.footer-section {margin-bottom: 0;}
+.social-icons {justify-content: flex-start;}
+}
