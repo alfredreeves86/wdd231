@@ -228,7 +228,7 @@ section p {
 }
 
 .filter-buttons button.active {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: var(--text-light);
 }
 
@@ -347,7 +347,7 @@ footer {
     font-family: var(--font-heading);
     font-size: 1.125rem;
     margin-bottom: var(--spacing-md);
-    color: var(--accent-color);
+    color: var(--text-light);
 }
 
 .social-icons {

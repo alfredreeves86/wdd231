@@ -102,7 +102,7 @@ footer {
 
 .footer-section h3 {
     margin-bottom: var(--spacing-md);
-    color: var(--accent-color);
+    color: var(--text-light);
     font-family: var(--font-heading);
     font-size: 1.125rem;
 }
