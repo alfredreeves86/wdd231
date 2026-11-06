@@ -1,10 +1,14 @@
-/* Desktop overrides(≥768px) */
+/* Desktop overrides (≥768px) */
 @media (min-width: 768px) {
 
     /*structuring: Header: Logo | Spacer | Nav */
 header {
     grid-template-columns: auto 1fr auto;
     padding: var(--spacing-md) var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 .logo span {
     font-size: 1.5rem;
@@ -83,6 +87,10 @@ footer {
     gap: var(--spacing-lg);
     padding: var(--spacing-xl) var(--spacing-xl);
     text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-section {
