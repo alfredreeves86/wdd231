@@ -10,7 +10,6 @@ async function getProphetData() {
       throw new Error(`Request failed with status ${response.status}`);
     }
     const data = await response.json();
-    // console.table(data.prophets); // uncomment for debugging
     displayProphets(data.prophets);
   } catch (error) {
     console.error(error);
