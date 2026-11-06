@@ -38,7 +38,7 @@ header {
 /*For wayfinding on Desktop - Text Color Only*/
 .navigation li.current a {
     background-color: transparent;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /*MAIN max-width centered*/
