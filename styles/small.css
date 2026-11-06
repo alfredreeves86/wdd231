@@ -376,9 +376,11 @@ footer {
 .info-section p {
     margin: var(--spacing-xs) 0;
     font-size: 0.875rem;
+    color: var(--text-light);
 }
 
 .attribution-section p {
     font-size: 0.75rem;
     opacity: 0.7;
+    color: var(--text-light);
 }

@@ -137,5 +137,6 @@ footer {
 .attribution-section p {
     margin: var(--spacing-xs) 0;
     text-align: left;
+    color: var(--text-light);
 }
 }
