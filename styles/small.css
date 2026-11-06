@@ -360,6 +360,7 @@ footer {
 .social-icons a {
     display: inline-flex;
     transition: transform 0.2s, opacity 0.2s;
+    color: var(--text-light);
 }
 
 .social-icons a:hover {
