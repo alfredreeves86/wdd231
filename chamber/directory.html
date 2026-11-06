@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Directory | Palo Alto Chamber of Commerce</title>
+    <meta name="description" content="Discover Local Businesses in Palo Alto Chamber of Commerce directory. Find companies, contact info, and membership levels.">
+    <meta name="author" content="Alfred Kamisese">
+
+    <!--Favicon links; note from LA-1:Favicon-->
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+
+    <!--Open Graph / Social Media Meta; preparing social media meta(html)LA-2-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alfredreeves86.github.io/wdd231/chamber/directory.html">
+    <meta property="og:title" content="Chamber Directory | Palo Alto Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses in Palo Alto Chamber of Commerce directory. Find companies, contact info, and membership levels.">
+    <!--LA-2 og:image - Create a 1200x630 PNG, will deploy to Github Pages, using absolute URL-->
+    <meta property="og:image" content="https://alfredreeves86.github.io/wdd231/chamber/images/og-image.png">
+
+    <!--CSS links-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!--JS links-->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/palo-alto_logo.svg" alt="Palo Alto Chamber of Commerce Logo" width="48" height="48">
+            <span>Palo Alto Chamber of Commerce</span>
+        </div>
+
+        <!--Hamburger Button-->
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <!--Navigation block-->
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="current"><a href="directory.html" aria-current="page">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Title-->
+        <h1>Chamber Directory</h1>
+        
+        <!--Filter Controls (Grid/List toggle buttons(by JS))-->
+        <div class="filter-buttons" aria-label="View options">
+        <button data-view="grid" class="active" aria-pressed="true">Grid View</button>
+        <button data-view="list" aria-pressed="false">List View</button>
+    </div>
+
+    <!--For Member cards container - includes json data source (members.json) & fetch API populates-->
+    <div id="members-container" class="members-grid" role="list">
+        <!--inject member cards by the directory.js-->
+    </div>
+    </main>
+
+    <footer>
+        <!--Footer with copyright/info-->
+        <div class="footer-section social section">
+            <h3>Connect</h3>
+            <div class="social-icons">
+                <a href="https://github.com/alfredreeves86" target="_blank" rel="noopener" aria-label="Github">
+                    <img src="images/github.svg" alt="Github" width="32" height="32">
+                </a>
+                <a href="https://linkedin.com/in/alfred-reeves-kamisese-27a32a205" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

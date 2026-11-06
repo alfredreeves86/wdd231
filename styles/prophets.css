@@ -1,0 +1,35 @@
+#cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#cards section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#cards h2 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#cards img {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/*Desktop: responsive grid cancelling media quarries*/
+@media (min-width: 768px) {
+    #cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    }
+}

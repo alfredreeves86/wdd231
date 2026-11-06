@@ -1,0 +1,14 @@
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+ .members-grid.list-view {
+    grid-template-columns: 1fr;
+ }
+
+ .filter-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+ }
