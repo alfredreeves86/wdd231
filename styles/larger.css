@@ -58,7 +58,7 @@
     }
 
     .navigation a:hover {
-        color: var(--accent-color);
+        color: var(--text-light);
         background-color: transparent;
     }
 
