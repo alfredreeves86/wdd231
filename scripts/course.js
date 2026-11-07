@@ -79,24 +79,27 @@ function displayCourses(filter = 'all') {
 
     //Render Cards
     container.innerHTML = filtered.map(course => `
-        <article class="course-card ${course.completed ? 'completed' : ''}">
+        <div class="course-row">
+        <div class="course-info">
         <h3>${course.subject} ${course.number}: ${course.title}</h3>
+        <p class="course-description">${course.description}</p>
+        </div>
         <div class="course-meta">
         <span>${course.credits} credits</span>
         <span>${course.subject}</span>
         </div>
-        <p class="course-description">${course.description}</p>
         <div class="course-tech">
         ${course.technology.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
         </div>
-        </article>
+        </div>
         `).join('');
+
 
         //calculated credits total using reduce
         const totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
 
         if (creditsEL) {
-            creditsEL.textContent = `Total Credits: ${totalCredits}`;
+            creditsEL.textContent = `The total credits for courses listed above is ${totalCredits}.`;
         }
 }
 
