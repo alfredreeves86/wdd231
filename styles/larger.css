@@ -171,19 +171,17 @@
 
 
 
-    /*Footer - White Background*/
+    /*Footer -simple flow*/
     footer {
-        background-color: var(--background-color);
-        color: var(--text-color);
+        background-color: var(--footer-bg);
+        color: var(--footer-text);
         padding: var(--spacing-xl) var(--spacing-xl);
         text-align: center;
-        border-top: 1px solid var(--card-border);
     }
 
     footer p {
         margin: var(--spacing-xs) 0;
         font-size: 0.875rem;
-        color: var(--text-color);
     }
 
     .footer-section {
@@ -195,13 +193,6 @@
         margin-bottom: 0;
     }
 
-    .footer-section h3 {
-        font-family: var(--font-heading);
-        font-size: 1.125rem;
-        margin-bottom: var(--spacing-md);
-        color: var(--primary-color);
-    }
-
     .social-icons {
         justify-content: center;
         gap: var(--spacing-lg);
@@ -210,12 +201,12 @@
     .social-icons img {
         width: 32px !important;
         height: 32px !important;
-        filter: none; /* dark icons on white background */
+        filter: brightness(0) invert(1);
         flex-shrink: 0;
     }
 
     .footer-info p {
         text-align: center;
-        color: var(--text-color);
+        color: var(--text-light);
     }
 }
