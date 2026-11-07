@@ -66,41 +66,28 @@ const courses = [
 
 //Render course cards
 function displayCourses(filter = 'all') {
-    const container = document.getElementById('courses-container');
-    const creditsEL = document.getElementById('credits-total');
+ const container = document.getElementById('courses-container');
+ const creditsEl = document.getElementById('credits-total');
 
-    if (!container) return;
+ if (!container) return;
 
-    //Filter courses
-    const filtered = courses.filter(course => {
-        if (filter === 'all') return true;
-        return course.subject === filter;
-    });
+ const filtered = courses.filter(course => {
+ if (filter === 'all') return true;
+ return course.subject === filter;
+ });
 
-    //Render Cards
-    container.innerHTML = filtered.map(course => `
-        <div class="course-row">
-        <div class="course-info">
-        <h3>${course.subject} ${course.number}: ${course.title}</h3>
-        <p class="course-description">${course.description}</p>
-        </div>
-        <div class="course-meta">
-        <span>${course.credits} credits</span>
-        <span>${course.subject}</span>
-        </div>
-        <div class="course-tech">
-        ${course.technology.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-        </div>
-        </div>
-        `).join('');
+ // Render as simple course title cards (wireframe format)
+ container.innerHTML = filtered.map(course => `
+ <div class="course-card">
+ <h3>${course.subject} ${course.number}: ${course.title}</h3>
+ </div>
+ `).join('');
 
+ const totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
 
-        //calculated credits total using reduce
-        const totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
-
-        if (creditsEL) {
-            creditsEL.textContent = `The total credits for courses listed above is ${totalCredits}.`;
-        }
+ if (creditsEl) {
+ creditsEl.textContent = `The total credits for courses listed above is ${totalCredits}.`;
+ }
 }
 
 //Filter button event listeners

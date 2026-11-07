@@ -24,18 +24,23 @@
 </head>
 <body>
     <header>
-        <div class="site-name">WDD 231 - Web Frontend Development I</div>
-            <!--Hamburger Button(Mobile Only)-->
-    <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-    </button>
+        <div class="site-branding">
+            <img src="images/logo.svg" alt="WDD 231 Logo" width="48" height="48">
+            <span>WDD 231 - Web Frontend Development I</span>
+        </div>
+
+        <!--Hamburger Button for mobile view-->
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </header>
+    
     <nav id="nav-bar" class="navigation">
         <ul>
             <li class="current"><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="chamber/index.html">Chamber Project</a></li>
+            <li><a href="project/index.html">Chamber Project</a></li>
             <li><a href="project/index.html">Final Project</a></li>
         </ul>
     </nav>
@@ -43,18 +48,19 @@
     <main>
         <h1>Home</h1>
 
-        <section id="about-course">
-            <h2>About This Course</h2>
-            <p>WDD 231 builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.</p>
+        <section id="about-me-section">
+            <h2>About Me</h2>
             <div class="about-me">
-                <img src="images/alfredportrait.webp" alt="Alfred Kamisese - Web Developer" width="400" height="250" loading="lazy">
-                <div class="bio">
-                <h3>About Me</h3>
-                <p>I'm Alfred Kamisese, a web developer based in California. I'm passionate about creating accessible, performant web experiences that serve real users. My background spans web development, photography/videography, and financial analysis - giving me a unique perspective on building digital products.</p>
-                <p>When not coding, you'll find me behind a camera capturing moments, analyzing trading markets, or exploring the intersection of design and technology.</p>
+                <div class="about-text">
+                    <p>I'm Alfred Kamisese, a web developer based in California. I'm passionate about creating accesible, performant we experiences that serve real users. My background spans web development, photography/videography, and financial analysis - givi me a unique perspective on building digital products.</p>
+                    <p>When not coding, you'll find me behind a camera capturing moments, analyzing trading markets, or exploring the intersection of design and technology.</p>
+                </div>
+                <div class="student-photo">
+                    <img src="images/alfredportrait.webp" alt="Alfred Kamisese - Web Developer" width="400" height="250" loading="lazy">
                 </div>
             </div>
         </section>
+
         <section id="certificate-courses">
             <h2>Certificate Courses</h2>
             <div class="filter-buttons">
@@ -67,15 +73,14 @@
         </section>
 
         <section id="resources">
-            <h2>Resources</h2>
-            <ul>
-                <li><a href="https://byui-cse.github.io/wdd231-ww-course/" target="_blank" rel="noopener">Course Website</a></li>
-                <li><a href="https://byui-cse.github.io/wdd-audits/wdd231-w01-homepage.html" target="_blank" rel="noopener">Week 1 Audit Tool</a></li>
-                <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
-            </ul>
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://byui-cse.github.io/wdd231-ww-course/" target="_blank" rel="noopener">Courses Website</a></li>
+            <li><a href="https://byui-cse.github.io/wdd-audits/wdd231-w01-homepage.html" target="_blank" rel="noopener">Audit Tool</a></li>
+            <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+        </ul>
         </section>
     </main>
-
     <footer>
         <div class="footer-section footer-info">
             <p>&copy; <span id="currentyear"></span> | Alfred Kamisese | California, USA</p>
