@@ -65,7 +65,7 @@
     /*Wayfinding -text color only on desktop*/
     .navigation li.current a {
         background-color: transparent;
-        color: var(--accent-color);
+        color: var(--text-light);
         font-weight: 600;
     }
 
