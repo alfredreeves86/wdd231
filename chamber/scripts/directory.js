@@ -36,7 +36,7 @@ function renderMembers(view) {
     currentView = view;
     container.className = 'members-grid' + (view === 'list' ? ' list-view' : '');
     container.innerHTML = membersData.map(m => `
-        <article class="member-card ${view === 'list' ? 'list-view' : ''}" role="listitem">
+        <article class="member-card ${view === 'list' ? 'list-view' : ''}">
             <img src="${m.image}" alt="${m.name} logo" class="card-image" loading="lazy" width="300" height="200">
             <div class="card-content">
                 <div class="card-header">
