@@ -35,9 +35,9 @@ function getBadgeText(level) {
 function renderMembers(view) {
     currentView = view;
     container.className = 'members-grid' + (view === 'list' ? ' list-view' : '');
-    container.innerHTML = membersData.map(m => `
+    container.innerHTML = membersData.map((m, i) => `
         <article class="member-card ${view === 'list' ? 'list-view' : ''}">
-            <img src="${m.image}" alt="${m.name} logo" class="card-image" loading="lazy" width="300" height="200" ${i === 0 ? 'fetchpriority="high"' : ''}>
+            <img src="${m.image}" alt="${m.name} logo" class="card-image" ${i === 0 ? 'fetchpriority="high" loading="eager"' : 'loading="lazy"'} width="300" height="200">
             <div class="card-content">
                 <div class="card-header">
                     <h2 class="card-name">${m.name}</h2>
