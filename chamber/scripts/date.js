@@ -1,16 +1,12 @@
-//Dynamic Copyright for Year and Last modified in footer//
-//Used date modified from the root.//
+// date.js — Footer Date Injection
 document.addEventListener('DOMContentLoaded', () => {
-    //for copyright year
-    const yearEL = document.getElementById('currentyear');
-    if (yearEL) {
-        yearEL.textContent = new Date().getFullYear();
-    }
+ const year = new Date().getFullYear();
+ const lastMod = new Date(document.lastModified).toLocaleDateString('en-US', {
+ year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+ });
 
-    //Last modified date
-    const modifiedEl = document.getElementById('lastModified');
-    if (modifiedEl) {
-        //will return MM/DD/YYY, time
-        modifiedEl.textContent = document.lastModified;
-    }
+ const yearEl = document.getElementById('currentyear');
+ const lastModEl = document.getElementById('lastModified');
+ if (yearEl) yearEl.textContent = year;
+ if (lastModEl) lastModEl.textContent = lastMod;
 });

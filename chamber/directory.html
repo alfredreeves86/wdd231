@@ -23,6 +23,12 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!--Google Fonts Link: Garamond for headings-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+
     <!--JS links-->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
@@ -30,20 +36,23 @@
 
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/palo-alto_logo.svg" alt="Palo Alto Chamber of Commerce Logo" width="48" height="48">
-            <span>Palo Alto Chamber of Commerce</span>
-        </div>
+    <header class="header" role="banner">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="images/palo-alto_logo.svg" alt="Palo Alto of Commer Logo" width="48" height="48">
+                <span>Palo Alto Chamber of Commerce</span>
+            </div>
 
         <!--Hamburger Button-->
-        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-bar">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
+        </div>
+
         <!--Navigation block-->
-        <nav id="nav-bar" class="navigation">
+        <nav id="nav-bar" class="navigation" role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li class="current"><a href="directory.html" aria-current="page">Directory</a></li>
@@ -53,12 +62,12 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main">
         <!--Title-->
         <h1>Chamber Directory</h1>
         
         <!--Filter Controls (Grid/List toggle buttons(by JS))-->
-        <div class="filter-buttons" aria-label="View options">
+        <div class="filter-buttons" role="group" aria-label="View options">
         <button data-view="grid" class="active" aria-pressed="true">Grid View</button>
         <button data-view="list" aria-pressed="false">List View</button>
     </div>
@@ -69,20 +78,36 @@
     </div>
     </main>
 
-    <footer>
-        <!--Footer with copyright/info-->
-        <div class="footer-section social section">
-            <h3>Connect</h3>
-            <div class="social-icons">
-                <a href="https://github.com/alfredreeves86" target="_blank" rel="noopener" aria-label="Github">
-                    <img src="images/github.svg" alt="Github" width="32" height="32">
-                </a>
-                <a href="https://linkedin.com/in/alfred-reeves-kamisese-27a32a205" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
-                </a>
+<!--Footer content social-->
+<footer role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-section social-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/alfredreeves86" target="_blank" rel="noopener" aria-label="Github">
+                        <img src="../images/github.svg" alt="Github" width="32" height="32">
+                    </a>
+                    <a href="https://www.linkedin.com/in/alfred-reeves-kamisese-27a32a205" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img src="../images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                    </a>
+                    <a href="https://twittercom" target="_blank" rel="noopener" aria-label="Twitter">
+                        <img src="../images/twitter.svg" alt="Twitter" width="32" height="32">
+                    </a>
+                </div>
+            </div>
+            <!--Footer info-->
+            <div class="footer-section info-section">
+                <p>&copy; <span id="currentyear"></span> | Alfred Kamisese | California, USA</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+
+            <!--Footer attribution block-->
+            <div class="footer-section attribution-section">
+                <p>WDD 231 Chamber Directory | BYU-Idaho</p>
             </div>
         </div>
-    </footer>
-    
+    </div>
+</footer>    
 </body>
 </html>

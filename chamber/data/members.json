@@ -3,7 +3,7 @@
         "name": "Stanford Shopping Center",
         "address": "660 Stanford Shopping Ctr, Palo Alto, CA 94304",
         "phone": "(650) 617-8202",
-        "website": "https://www.stanfordshop.com",
+        "website": "https://www.simon.com/mall/stanford-shopping-center",
         "image": "images/stanford-shopping-center.webp",
         "membershipLevel": 3,
         "other": "Premier open-air shopping destination with 140+ stores"
@@ -27,13 +27,13 @@
         "other": "Custom-blended coffee, multiple Bay Area locations"
     },
     {
-        "name": "Palo Alto Bike Center",
-        "address": "380 Cambridge Ave, Palo Alto, CA 94301",
-        "phone": "(650) 328-0767",
-        "website": "https://paloaltobikecenter.com",
-        "image": "images/palo-alto-bike-center.webp",
+        "name": "Palo Alto Bicycles",
+        "address": "171 University Ave, Palo Alto, CA 94301",
+        "phone": "(650) 328-7411",
+        "website": "https://paloaltobicycles.com",
+        "image": "images/palo-alto-bicycles.webp",
         "membershipLevel": 1,
-        "other": "Full-service bike shop since 1982"
+        "other": "Family-run bike shop since 1930"
     },
     {
         "name": "Books Inc.",
@@ -54,12 +54,12 @@
         "other": "Modern seafood restaurant downtown"
     },
     {
-        "name": "University Art",
-        "address": "230 Hamilton Ave, Palo Alto, CA 94301",
-        "phone": "(650) 328-3500",
-        "website": "https://universityart.com",
-        "image": "images/university-art.webp",
+        "name": "President Barbershop",
+        "address": "490 University Ave, Palo Alto, CA 94301",
+        "phone": "(650) 325-5229",
+        "website": "https://presidentbarbershop.business.site",
+        "image": "images/president-barbershop.webp",
         "membershipLevel": 1,
-        "other": "Art supplies and custom framing since 1955"
+        "other": "Classic barberhsop since 1949, family-owned, Best of 2013 Men's Haircut winner"
     }
 ]
