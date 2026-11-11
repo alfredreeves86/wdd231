@@ -76,6 +76,7 @@ header {
   background: var(--color-bg-card);
   border-bottom: 1px solid var(--color-border);
   position: relative;
+  overflow-x: hidden;
 }
 .header-inner {
    max-width: var(--max-width);
@@ -89,7 +90,6 @@ header {
    display: flex;
    align-items: center;
    gap: var(--space-sm);
-   flex-shrink: 0;
 }
 .logo img {
    width: 100px;
@@ -101,6 +101,21 @@ header {
    font-weight: 600;
    color: var(--color-text);
    letter-spacing: -0.02em;
+}
+
+/*--Responsive logo for small screens--*/
+@media (max-width:360px) {
+   .logo img {
+      width: 48px;
+      height: 48px;
+   }
+   .logo span {
+      font-size: var(--fs-lg);
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      max-width: 140px;
+   }
 }
 /*-- Hamburger --*/
 .hamburger {
@@ -450,9 +465,9 @@ footer {
    transform: translateY(-2px);
 }
 .social-icons img {
-   width: 20px;
-   height: 20px;
-   filter: brightness(0) invert(1);
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
 }
  /*--for very small screen due to logo beign big--*/
  @media (max-width:400px) {
@@ -467,12 +482,7 @@ footer {
       gap: var(--space-sm);
    }
  }
- 
- @media (max-width: 380px) {
-   .logo span {
-      display: none;
-   }
- }
+
 
 /*--Reduced Motion(friendly to user)--*/
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
