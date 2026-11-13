@@ -1,0 +1,13 @@
+Practise using module to import and export statements:
+
+ES Modules provide ways to help you write cleaner, more organized, and more manageable code by breaking it down into smaller, reusable parts. The following sections address the key concepts and explain how and why to use modules.
+
+Native Browser Support
+In order to use ES Module features, the type="module" attribute is required in the <script> tag. This attribute tells the browser to treat the script as a module, enabling the use of import and export statements within the script.
+
+For example, you would reference a module script named app like this:
+<script type="module" src="scripts/app.mjs"></script>
+
+Note that the script file uses the .mjs extension to indicate that it is a module. Either .js or .mjs works as long as the script tag has type="module". This course uses .mjs to make module files easy to spot.
+
+**Module scripts are defered by default.
