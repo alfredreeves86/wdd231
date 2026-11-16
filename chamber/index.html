@@ -5,19 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palo Alto Chamber of Commerce | Home</title>
     <meta name="description" content="Palo Alto Chamber of Commerce - Connecting local businesses, promoting economic growth, and building community.">
-    <meta name="author" content="Alfred Kamsisese">
+    <meta name="author" content="Alfred Kamisese">
 
+<!--Favicon-->
     <link rel="icon" href="images/favicon.ico" sizes="any">
 
+    <!--OG Meta Properties-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alfredreeves86.github.io/wdd231/chamber/index.html">
     <meta property="og:title" content="Palo Alto Chamber of Commerce | Home">
-    <meta property="og:description" content="Connecting local businesses, promoting economic growth, and building community in Palo Alto.">
+    <meta property="og:description" content="Connecting local businesses, promoting economic growth, and building community in Palo Alto">
     <meta property="og:image" content="https://alfredreeves86.github.io/wdd231/chamber/images/og-image.png">
 
+    <!--CSS-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+
+    <!--Scripts-->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script type="module" src="scripts/main.mjs"></script>
 
 </head>
 <body>
-    
+
+    <header class="header" role="banner">
+        <div class="header-inner">
+            <div class="logo">
+            <img src="images/palo-alto_logo.svg" alt="Palo Alto Chamber of Commerce Logo" width="48" height="48">
+            <span>Palo Alto Chamber of Commerce</span>
+        </div>
+
+        <!--Hamburger(note: I need to make sure my hamburger line shows when in moblie view)-->
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-bar">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!--Navigation-->
+        <nav id="nav-bar" class="navigation" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <!--Hero Section-->
+        <section class="hero" aria-labelledby="hero-title">
+            <img src="images/hero.webp" alt="Palo Alto downtown skyline" width="1200" height="600" fetchpriority="high" loading="eager">
+            <div class="hero-overlay">
+                <h1 id="hero-title">Palo Alto Chamber of Commerce</h1>
+                <p>Connecting Business. Building Community.</p>
+                <a href="join.html" class="cta-button"> Join the Chamber</a>
+            </div>
+        </section>
+
+        <!--Events Section for current events-->
+        <section class="events" aria-labelledby="events-title">
+            <h2 id="events-title">Upcoming Events</h2>
+            <div id="events-container" class="events-grid"></div>
+        </section>
+
+        <!--Weather Section-->
+        <section class="weather" aria-labelledby="weather-title">
+            <h2 id="weather-title">Current Weather</h2>
+            <div id="weather-container" class="weather-card"></div>
+        </section>
+
+        <!--Spotlights Section(must random show 3 gold and silver members)-->
+        <section class="spotlights" aria-labelledby="spotlights-title">
+            <h2 id="spotlights-title">Member Spotlights</h2>
+            <div id="spotlights-container" class="spotlights-grid"></div>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <!--Footer Social Icons, info, author-->
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <!--Left Align(Info)-->
+                <div class="footer-section chamber-info">
+                    <h3>Palo Alto Chamber of Commerce</h3>
+                    <p>500 Hamilton Ave</p>
+                    <p>Palo Alto, CA 94301</p>
+                    <p>Phone: (650) 324-1121</p>
+                    <p>Email: info@paloaltochamber.com</p>
+                </div> 
+
+                    <!--Center Align(social)-->
+                    <div class="footer-section social-section">
+                        <h3>Connect</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com" target="_blank" rel="noopener" aria-label="Github">
+                                <img src="../images/github.svg" alt="Github" width="32" height="32">
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <img src="../images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                                <img src="../images/twitter.svg" alt="Twitter" width="32" height="32">
+                            </a>
+                        </div>
+                    </div>
+                    <!--My info-->
+                    <div class="footer-section info-section">
+                        <p>&copy; <span id="currentyear"></span> | Alfred Kamisese | California, USA</p>
+                        <p>Last Modified: <span id="lastModified"></span></p>
+                        <p>WDD 231 Chamber Home | BYU-Idaho</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
