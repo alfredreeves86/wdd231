@@ -1,14 +1,16 @@
 export async function loadWeather() {
 
     const container = document.querySelector('#weather-container');
-    const template = document.querySelector('#weather-card-template');
+    const mainTemplate = document.querySelector('#weather-card-template');
+    const dayTemplate = document.querySelector('#forecast-day-template');
+    const errorTemplate = document.querySelector('#weather-error-template');
 
-    if (!container || !template) return;
+    if (!container || !mainTemplate || !dayTemplate || !errorTemplate) return;
 
     //API call for openweather_api//
     const apiKey = '56b9c0a30b534396d84e1950c2ba88d7';
     const lat = 37.44; // Palo Alto
-    const lon = 122.14;
+    const lon = -122.14;
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
     try {
@@ -31,7 +33,7 @@ export async function loadWeather() {
 
         const forecastDays = Object.keys(forecastByDate).slice(0,3).map(date => {
             const dayItems = forecastByDate[date];
-            const noon =dayItems.find(d => new Date(d.dt * 1000).getHours() === 12) || dayItems[dayItems.lenght >> 1];
+            const noon =dayItems.find(d => new Date(d.dt * 1000).getHours() === 12) || dayItems[dayItems.length >> 1];
             return {
                 date: new Date(date).toLocaleDateString(undefined, {weekday: 'short', month: 'short', day: 'numeric'}),
                 temp: Math.round(noon.main.temp),
@@ -44,7 +46,7 @@ export async function loadWeather() {
         container.innerHTML = '';
 
         //fill current weather//
-        const clone = template.context.cloneNode(ture);
+        const clone = mainTemplate.content.cloneNode(true);
 
         clone.querySelector('.weather-temp').textContent = currentTemp + '°F';
         clone.querySelector('.weather-desc').textContent = currentDesc;

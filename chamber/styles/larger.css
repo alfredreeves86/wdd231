@@ -5,7 +5,7 @@
         grid-template-columns: repeat(3, 1fr);
     }
     .main {
-        padding: var(--space-2xl) var(--space-2xl);
+        padding: var(--space-xl) var(--space-xl);
     }
     .logo span {
         font-size: var(--fs-heading);
