@@ -74,6 +74,13 @@
         <!--Events Section for current events-->
         <section class="events" aria-labelledby="events-title">
             <h2 id="events-title">Upcoming Events</h2>
+            <!--events card-->
+            <template id="event-card-template">
+                <article class="event-card">
+                    <h3 class="event-title"></h3>
+                    <p class="event-meta"></p>
+                </article>
+            </template>
             <div id="events-container" class="events-grid"></div>
         </section>
 
@@ -87,6 +94,15 @@
         <section class="spotlights" aria-labelledby="spotlights-title">
             <h2 id="spotlights-title">Member Spotlights</h2>
             <div id="spotlights-container" class="spotlights-grid"></div>
+            <!--spotlight template-->
+            <template id="spotlight-card-template">
+                <article class="spotlight-card">
+                    <img class="spotlight-image" src="" alt="" width="300" height="200" loading="lazy">
+                    <h3 class="spotlight-name"></h3>
+                    <p class="spotlight-tagline"></p>
+                    <span class="spotlight-badge"></span>
+                </article>
+            </template>
         </section>
 
     </main>

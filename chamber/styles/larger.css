@@ -15,6 +15,17 @@
         height: 200px;
     }
 
+    /*--Events Desktop View--*/
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+        gap: var(--space-md);
+    }
+    .event-card {
+        display: flex;
+        flex-direction: column;
+    }
+
     /*--Horizontal Navigation--*/
     .hamburger {
         display: none;
