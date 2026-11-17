@@ -83,11 +83,36 @@
             </template>
             <div id="events-container" class="events-grid"></div>
         </section>
-
+        
         <!--Weather Section-->
         <section class="weather" aria-labelledby="weather-title">
             <h2 id="weather-title">Current Weather</h2>
-            <div id="weather-container" class="weather-card"></div>
+            <div id="weather-container" class="weather-card">
+                <!--Main weather card-->
+                <template id="weather-card-template">
+                    <div class="weather-current">
+                        <img class="weather-icon" src="" alt="" width="64" height="64">
+                    <div>
+                    <p class="weather-temp"></p>
+                    <p class="weather-desc"></p>
+                    </div>
+                    </div>
+                    <div class="weather-forecast"></div>
+                </template>
+                <!--Forecast day template-->
+                <template id="forecast-day-template">
+                    <div class="forecast-day">
+                        <p class="forecast-date"></p>
+                        <img src="" alt="" width="48" height="48">
+                        <p class="forecast-temp"></p>
+                        <p class="forecast-desc"></p>
+                    </div>
+                </template>
+                <!--Error template-->
+                <template id="weather-error-template">
+                    <p class="weather-error">Weather unavailable</p>
+                </template>
+            </div>    
         </section>
 
         <!--Spotlights Section(must random show 3 gold and silver members)-->
