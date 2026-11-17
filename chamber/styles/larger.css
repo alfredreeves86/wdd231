@@ -65,7 +65,7 @@
         display: none;
     }
     .navigation {
-        display: flex !important;
+        display: flex;
         position: static;
         background: none;
         border: none;
