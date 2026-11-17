@@ -35,13 +35,13 @@
 
 </head>
 <body>
-    <header class="header" role="banner">
+    <header class="header">
         <div class="header-inner">
             <div class="logo">
                 <img src="images/palo-alto_logo.svg" alt="Palo Alto of Commer Logo" width="48" height="48">
                 <span>Palo Alto Chamber of Commerce</span>
             </div>
-        </div>
+        
 
         <!--Hamburger Button-->
         <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-bar">
@@ -49,10 +49,11 @@
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
+        </div>
        
 
         <!--Navigation block-->
-        <nav id="nav-bar" class="navigation" role="navigation" aria-label="Main navigation">
+        <nav id="nav-bar" class="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="current"><a href="directory.html" aria-current="page">Directory</a></li>
@@ -67,18 +68,18 @@
         <h1 class="page-title">Chamber Directory</h1>
         
         <!--Filter Controls (Grid/List toggle buttons(by JS))-->
-        <div class="filter-buttons" role="group" aria-label="View options">
+        <div class="filter-buttons" aria-label="View options">
         <button data-view="grid" class="active" aria-pressed="true">Grid View</button>
         <button data-view="list" aria-pressed="false">List View</button>
     </div>
 
     <!--For Member cards container - includes json data source (members.json) & fetch API populates-->
-    <div id="members-container" class="members-grid" role="list">
+    <div id="members-container" class="members-grid">
         <!--inject member cards by the directory.js-->
     </div>
     </main>
 <!--Footer content social-->
-<footer role="contentinfo">
+<footer>
     <div class="footer-inner">
         <div class="footer-grid">
             <!--Left-->
