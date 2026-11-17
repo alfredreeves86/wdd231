@@ -76,7 +76,6 @@ header {
   background: var(--color-bg-card);
   border-bottom: 1px solid var(--color-border);
   position: relative;
-  overflow-x: hidden;
 }
 .header-inner {
    max-width: var(--max-width);
@@ -92,31 +91,19 @@ header {
    gap: var(--space-sm);
 }
 .logo img {
-   width: 100px;
-   height: 100px;
+   width: 150px;
+   height: 150px;
+   transition: width var(--transition-base), height var(--transition-base);
 }
 .logo span {
    font-family: var(--font-display);
-   font-size: var(--fs-2xl);
+   font-size: var(--fs-xl);
    font-weight: 600;
    color: var(--color-text);
    letter-spacing: -0.02em;
+   transition: font-size var(--transition-base);
 }
 
-/*--Responsive logo for small screens--*/
-@media (max-width:360px) {
-   .logo img {
-      width: 50px;
-      height: 50px;
-   }
-   .logo span {
-      font-size: var(--fs-lg);
-      white-space: normal;
-      word-break: break-word;
-      overflow-wrap: anywhere;
-      max-width: 140px;
-   }
-}
 /*-- Hamburger --*/
 .hamburger {
    display: flex;
@@ -150,6 +137,7 @@ header {
    background: var(--color-bg-card);
    border-bottom: 1px solid var(--color-border);
    padding: var(--space-lg);
+   z-index: 1000;
 }
 .navigation.show {
    display: block;
@@ -247,11 +235,13 @@ header {
    color: var(--font-body);
    font-weight: 600;
    margin-bottom: var(--space-sm);
+   transition: font-size var(--transition-base);
 }
 .hero-overlay p {
    font-size: var(--fs-lg);
    margin-bottom: var(--space-xl);
    opacity: 0.9;
+   transition: font-size var(--transition-base);
 }
 
 /*-- View Toggle --*/
@@ -698,16 +688,3 @@ footer {
   height: 20px;
   filter: brightness(0) invert(1);
 }
- /*--for very small screen due to logo beign big--*/
- @media (max-width:400px) {
-   .logo img {
-      width: 150px;
-      height: 150px;
-   }
-   .logo span {
-      font-size: var(--fs-lg);
-   }
-   .header-inner {
-      gap: var(--space-sm);
-   }
- }

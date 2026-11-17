@@ -15,6 +15,18 @@
         height: 200px;
     }
 
+    /*--Hero--*/
+    .hero-overlay h1 {
+        font-size:  3rem;
+    }
+    .hero-overlay p {
+        font-size: var(--fs-xl);
+    }
+    .cta-button {
+        padding: var(--space-lg) var(--space-2xl);
+        font-size: var(--fs-lg);
+    }
+
     /*--Events Desktop View--*/
     .events-grid {
         display: grid;
