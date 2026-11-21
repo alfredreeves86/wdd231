@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palo Alto Chamber of Commerce | Join</title>
+    <meta name="description" content="Palo Alto Chamber of Commerce - Connecting local businesses, promoting economic growth, and building community.">
+    <meta name="author" content="Alfred Kamisese">
+
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+
+    <!--OG Meta Properties-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alfredreeves86.github.io/wdd231/chamber/index.html">
+    <meta property="og:title" content="Palo Alto Chamber of Commerce | Home">
+    <meta property="og:description" content="Connecting local businesses, promoting economic growth, and building community in Palo Alto">
+    <meta property="og:image" content="https://alfredreeves86.github.io/wdd231/chamber/images/og-image.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap">
+
+    <!--Scripts-->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script type="module" src="scripts/main.mjs"></script>
+    <script src="scripts/join.js" defer></script>
+
+</head>
+   
+<body>
+     <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+            <img src="images/palo-alto_logo.svg" alt="Palo Alto Chamber of Commerce Logo">
+            <span>Palo Alto Chamber of Commerce</span>
+        </div>
+
+        <!--Hamburger(note: I need to make sure my hamburger line shows when in moblie view)-->
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-bar">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!--Navigation-->
+        <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+         </div>
+    </header>
+    <main>
+        <div class="main">
+            <h1 class="page-title">Join the Chamber</h1>
+            <p class="page-subtitle">Become a member and connect with Palo Alto's business community</p>
+
+            <form action="thankyou.html" method="get" class="membership-form">
+                <div class="form-row">
+                    <label>
+                        First Name
+                        <input type="text" name="first-name" title="Your first name" autocomplete="given-name" required>
+                    </label>
+                    <label>
+                        Last Name
+                        <input type="text" name="last-name" title="Your last name" autocomplete="family-name" required>
+                    </label>
+                    <label>
+                        Organization Title
+                        <input type="text" name="org-title" title="Organization title (letters, hyphens, spaces only, min 7 characters)" autocomplete="organization-title" pattern="^[A-Za-z\s-]{7,}$" required>
+                    </label>
+
+                    <label>
+                        Email Address
+                        <input type="email" name="email" title="Your email address" autocomplete="email" placeholder="name@example.com" required>
+                    </label>
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="phone" title="Your mobile/home phone number" autocomplete="tel" required>
+                    </label>
+                    <label>
+                        Business/Organization Name
+                        <input type="text" name="business-name" title="Your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <label>
+                        Membership Level
+                        <select name="membership-level" required>
+                            <option value="">Select a membership level</option>
+                            <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Business/Organization Description
+                        <textarea name="description" title="Describe you business or organization"></textarea>
+                    </label>
+                    <input type="hidden" name="timestamp" id="timestamp" value="">
+                    <button type="submit" class="cta-button">Submit Application</button>
+                </div>
+            </form> 
+            <section class="membership-cards-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <article class="membership-card">
+                        <h3>NP Membership</h3>
+                        <p class="card-tagline">For non-profit organization</p>
+                        <p class="card-cost">No Fee</p>
+                        <button type="button" class="card-modal-trigger">View Benefits</button>
+                    </article>
+
+                    <article class="membership-card">
+                        <h3>Bronze Membership</h3>
+                        <p class="card-tagline">Essential benefits for growing business</p>
+                        <p class="card-cost">$150/year</p>
+                        <button id="bronze-trigger" type="button" class="card-modal-trigger">View Benefits</button>
+                    </article>
+
+                    <article class="membership-card">
+                        <h3>Silver Membership</h3>
+                        <p class="card-tagline">Enhanced visibility and networking</p>
+                        <p class="card-cost">$350/year</p>
+                        <button id="silver-trigger" type="button" class="card-modal-trigger">View Benefits</button>
+                    </article>
+
+                    <article class="membership-card">
+                        <h3>Gold Membership</h3>
+                        <p class="card-tagline">Premium benefits and maximum exposure</p>
+                        <p class="card-cost">$750/year</p>
+                        <button id="gold-trigger" type="button" class="card-modal-trigger">View Benefits</button>
+                    </article>
+                </div>
+            </section>
+
+            <!--Dialog-->
+            <!--NP Modal-->
+            <dialog id="np-modal" class="membership-modal">
+                <h3>NP Membership Benefits</h3>
+                <ul>
+                    <li>Directory listing with basic info</li>
+                    <li>Access to member-only events</li>
+                    <li>Monthly newsletter</li>
+                    <li>Community forum access</li>
+                </ul>
+                <p class="modal-note">No annual fee for qualified non-profit organizations</p>
+                <button class="modal-close">&times;</button>
+            </dialog>
+
+            <!--Bronze Modal-->
+            <dialog id="bronze-modal" class="membership-modal">
+                <h3>Bronze Membership Benefits</h3>
+                <ul>
+                    <li>All NP Benefits</li>
+                    <li>Enhanced directory listing with logo</li>
+                    <li>Event discounts (10%)</li>
+                    <li>Business referral program</li>
+                    <li>Social media spotlight</li>
+                </ul>
+                <p class="modal-note">$150/year - Ideal for small businesses</p>
+                <button class="modal-close">&times;</button>
+            </dialog>
+
+            <!--Silver Modal-->
+            <dialog id="silver-modal" class="membership-modal">
+                <h3>Silver Membership Benefits</h3>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Priority directory placement</li>
+                    <li>Event discounts (20%)</li>
+                    <li>Homepage spotlight rotation (monthly)</li>
+                    <li>Quarterly training workshops</li>
+                    <li>Dedicated networking events</li>
+                </ul>
+                <p class="modal-note">$350/year - Best value for growing companies</p>
+                <button class="modal-close">&times;</button>
+            </dialog>
+
+            <!--Gold Modal-->
+            <dialog id="gold-modal" class="membership-modal">
+                <h3>Gold Membership Benefits</h3>
+                <ul>
+                    <li>All silver benefits</li>
+                    <li>Top-tier directory placement</li>
+                    <li>Event discounts (30%)</li>
+                    <li>Permanent homepage spotlight</li>
+                    <li>Monthly training workshops</li>
+                    <li>Exclusive VP networking events</li>
+                    <li>Annual business consultation</li>       
+                </ul>
+                <p class="modal-note">$750/year - Maximum exposure and influence</p>
+                <button class="modal-close">&times;</button>
+            </dialog>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <!--Left Align(Info)-->
+                <div class="footer-section chamber-info">
+                    <h3>Palo Alto Chamber of Commerce</h3>
+                    <p>500 Hamilton Ave</p>
+                    <p>Palo Alto, CA 94301</p>
+                    <p>Phone: (650) 324-1121</p>
+                    <p>Email: info@paloaltochamber.com</p>
+                </div> 
+
+                    <!--Center Align(social)-->
+                    <div class="footer-section social-section">
+                        <h3>Connect</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com" target="_blank" rel="noopener" aria-label="Github">
+                                <img src="../images/github.svg" alt="" width="32" height="32">
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <img src="../images/linkedin.svg" alt="" width="32" height="32">
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                                <img src="../images/twitter.svg" alt="" width="32" height="32">
+                            </a>
+                        </div>
+                    </div>
+                    <!--My info-->
+                    <div class="footer-section info-section">
+                        <p>&copy; <span id="currentyear"></span> | Alfred Kamisese | California, USA</p>
+                        <p>Last Modified: <span id="lastModified"></span></p>
+                        <p>WDD 231 Chamber Home | BYU-Idaho</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

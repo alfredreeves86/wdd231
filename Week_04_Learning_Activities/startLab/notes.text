@@ -1,0 +1,32 @@
+Single Dialog Part 1
+1. Buttons on the HTML page = 1
+2. Dialog Elements on the HTML page = 1
+3. Close Buttons = 1
+4. Query Selector = 3
+
+
+
+
+Multiple Reusable Dialog Part 2
+1. Buttons on the HTML page = 3
+2. Didalog Elements on the HTML page = 1
+3. Close Buttons = 1
+4. Query Selector = 6
+5. Eventlisteners = 4
+
+
+
+
+Modal Dialog Part 3
+Reusable Dialog:
+
+1. Modules (import/export)
+2. Jason Data
+3. HTML id's = 1
+4. Dialog Elements = 1
+5. (Many) Eventlisteners (programmatically)
+6. (Finish script will be so powerful) Powerful and Dynamic
+
+
+
+Modal Dialog Part 4 

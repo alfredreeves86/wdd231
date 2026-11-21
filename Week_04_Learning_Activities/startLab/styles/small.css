@@ -1,0 +1,18 @@
+#openButton {
+    background-color: bisque;
+    border-radius: 55px;
+}
+#openButton:hover {
+    background-color: chocolate;
+    color: aliceblue;
+}
+
+#dialogBox {
+    background-color: bisque;
+    border-color: black;
+}
+
+::backdrop {
+    background-color: rgba(120, 107, 114, 0.8);
+}
+
